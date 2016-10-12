@@ -28,7 +28,7 @@ plt.show()
 #PART_THREE
 z = (6*x**2 + 9*y**2 + 4*x*y)/50 #introducing z
 plt.clf() #clearing the plot, resettin axes scales
-plt.hist(z, 100, normed=1, facecolor='cyan')  # Plotting the histogram. Number of bins = 100
+plt.hist(z, 100, normed=True, facecolor='cyan')  # Plotting the histogram. Number of bins = 100
 plt.title("Histogram for Probability Density of z")
 plt.ylabel("Probability Density")
 plt.xlabel("z")
