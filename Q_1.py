@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 x1 = np.linspace(-100.0, 100.0, 5000.0)
 y1 = np.linspace(-100.0, 100.0, 5000.0)
 X, Y = np.meshgrid(x1, y1) #seting up a symmertrical meshgrid
-Z = (6*X**2 + 9*Y**2 + 4*X*Y)/(1000*(2**0.5)*math.pi)
+N = (6*X**2 + 9*Y**2 + 4*X*Y)/(1000*(2**0.5)*math.pi) #expression for pdf
 plt.figure()
-plot = plt.contourf(X, Y, Z)
+plot = plt.contourf(X, Y, N)
 plt.colorbar()
 plt.title('Contour Map of Probability Distribution Function of x and y')
 plt.xlabel('x')
