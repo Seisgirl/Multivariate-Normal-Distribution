@@ -27,6 +27,10 @@ plt.colorbar() #adding colorbar to chart values corresponding to colors
 plt.show()
 #PART_THREE
 z = (6*x**2 + 9*y**2 + 4*x*y)/50 #introducing z
+z_m = sum(z)/(50000) #mean value of z
+z_sd = math.sqrt(sum((z-z_m)**2)/50000) #standard deviation of z
+print (z_m)
+print (z_sd)
 plt.clf() #clearing the plot, resettin axes scales
 plt.hist(z, 100, normed=True, facecolor='cyan')  # Plotting the histogram. Number of bins = 100
 plt.title("Histogram for Probability Density of z")
