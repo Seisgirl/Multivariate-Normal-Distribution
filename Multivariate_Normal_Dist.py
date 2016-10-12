@@ -1,3 +1,16 @@
+"""
+Assignment 2 : Question One
+Author : Toshi Parmar
+a) Python code to make the contours of the probability density function
+of x and y.
+b) Generate random pairs of real numbers x and y that have this distribution.
+c) Make a 2D histogram of the the generated pairs (x,y) using a heatmap or
+colormap to represent the height of the histogram.
+d) For each pair construct the variable z
+e) Plot a histogram of z. Find the mean value of z and the standard deviation. Is
+this consistent with the expected distribution for z?
+"""
+
 import numpy as np
 import math
 import matplotlib.pyplot as plt
@@ -5,7 +18,7 @@ import matplotlib.pyplot as plt
 x1 = np.linspace(-10.0, 10.0, 5000.0)
 y1 = np.linspace(-10.0, 10.0, 5000.0)
 X, Y = np.meshgrid(x1, y1)                                                #seting up a symmertrical meshgrid
-N = (math.e**(-(6*X**2 + 9*Y**2 + 4*X*Y)/100))/(10*math.sqrt(2)*math.pi)                    #expression for pdf
+N = (math.e**(-(6*X**2 + 9*Y**2 + 4*X*Y)/100))/(10*math.sqrt(2)*math.pi)  #expression for pdf
 plt.figure()
 plot = plt.contour(X, Y, N)
 plt.colorbar()
